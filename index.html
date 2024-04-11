@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Board</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WaIg8btvO6NehjzVrOjFrC/Z8QwI0FmJjKzezuFNmOFW8Gv+IgSULNf/1UGRRjzTJPTPuEh4tO4+4YsJNAMyQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://use.fontawesome.com/efc83ea599.js"></script>
+    <script src="script.js"></script>
+    <script>
+      fetch('bottom-bar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('include-bottom-bar').innerHTML = data;
+        });
+    </script>
+
+    <script>
+        function printBingoBoard() {
+          window.print();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-board">
+            <h1>        <span>S</span><span>H</span><span>I</span><span>V</span><span>A</span>            </h1>
+            <div id="bingoBoard" class="bingo-board"></div>
+        </div>
+        <div class="container-items">
+            <h1>Items</h1>
+            <div id="itemsList" class="items-list"></div>
+            <div class="buttons">
+                <button id="shuffleItems">Shuffle Items</button>
+                <!-- <button id="randomizeBoard">Randomize Board</button> -->
+                <input type="text" id="newText" placeholder="Add new item">
+                <button id="addItem">Add Item</button>
+                <button onclick="printBingoBoard()">Print Board</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="include-bottom-bar"></div>
+    </footer>
+</body>
+
+</html>
