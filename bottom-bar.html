@@ -24,25 +24,31 @@ And in your body, put:
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Inline CSS for bottom-bar */
         #bottom-bar {
-            font-size: 20px;
             /* line-height: 45px; */
-            margin-top: 40px;
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #eeeeee;
-            color: #008CBA;
+            /* background-color: rgba(244, 243, 243, 0.436); */
+            color: var(--dark-green);
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
             font-size: 15px;
-            border-top: 2px solid rgb(170, 170, 170);
+            /* border-top: 1px solid rgb(170, 170, 170); */
         }
 
+        p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
         .left-content,
         .right-content {
             padding-left: 20px;
@@ -65,12 +71,12 @@ And in your body, put:
         .left-content a,
         .right-content a {
             display: inline;
-            color: #008CBA;
+            color: var(--dark-green);
         }
 
         .left-content a:hover,
         .right-content a:hover {
-            color: #0077a8;
+            color: var(--light-green);
         }
 
         .name {
@@ -81,10 +87,10 @@ And in your body, put:
         }
 
         .name a {
-            color: #008CBA;
+            color: var(--dark-green);
             text-decoration: none;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .icons {
@@ -101,7 +107,6 @@ And in your body, put:
         .icon {
             margin-left: 5px;
             margin-right: 5px;
-
         }
     </style>
 </head>
@@ -109,14 +114,11 @@ And in your body, put:
 <body>
     <div id="bottom-bar" style="clear: both;">
         <div class="left-content">
-            <p>
+            <!-- <p>
                 Site maintained by <a href="https://www.rickiheicklen.com">Ricki Heicklen</a>
-            </p>
+            </p> -->
         </div>
         <div class="right-content">
-            <!-- <div class="name">
-                <a href="https://www.rickiheicklen.com" target="_blank"><b>Ricki Heicklen</b></a>
-            </div> -->
             <div class="icons">
                 <p>
                     <a href="https://bayesshammai.substack.com/" target="_blank" class="icon substack-icon"><svg
@@ -129,6 +131,9 @@ And in your body, put:
                     <a href="https://github.com/RickiHeicklen" target="_blank"><i
                             class="icon fa fa-github fa-lg"></i></a>
                 </p>
+            </div>
+            <div class="name">
+                <a href="https://www.rickiheicklen.com" target="_blank"><b>Ricki Heicklen</b></a>
             </div>
         </div>
 </body>
